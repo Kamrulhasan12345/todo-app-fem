@@ -1,21 +1,28 @@
 body {
   --bg-col: hsl(0, 0%, 98%);
-  --bg-path: url('./images/bg-mobile-light.jpg');
+  --bg-path: url('../images/bg-mobile-light.jpg');
+  --switch-path: url('../images/icon-moon.svg');
 }
 
 body.dark {
   --bg-col: hsl(235, 21%, 11%);
-  --bg-path: url('./images/bg-mobile-dark.jpg');
+  --bg-path: url('../images/bg-mobile-dark.jpg');
+  --switch-path: url('../images/icon-sun.svg');
 }
 
-.mode__switch {
-  --switch-path: url('./images/icon-moon.svg');
+@media (prefers-color-scheme: dark) {
+  body {
+  --bg-col: hsl(0, 0%, 98%);
+  --bg-path: url('../images/bg-mobile-dark.jpg');
+  --switch-path: url('../images/icon-sun.svg');
 }
 
-.mode__switch.dark {
-  --switch-path: url('./images/icon-moon.svg');
+body.light {
+  --bg-col: hsl(235, 21%, 11%);
+  --bg-path: url('../images/bg-mobile-light.jpg');
+  --switch-path: url('../images/icon-moon.svg');
 }
-
+}
 body{
   margin: 0;
   padding: 0;
@@ -33,6 +40,7 @@ body{
 }
 
 .todo__head {
+  width: 85%;
   display: flex;
   justify-content: space-between;
   flex-direction: row;
@@ -45,17 +53,17 @@ body{
 }
 
 .mode__switch {
-  display: inline-block;
-  position: absolute;
-  border: none;
+  background: transparent;
   outline: none;
-  padding: 15px 15px;
+  border: none;
+}
+
+.mode__switch div {
+  width: 18px;
+  height: 18px;
   background: transparent;
   background-image: var(--switch-path);
   background-size: 18px;
   background-repeat: no-repeat;
-}
-
-@media (prefers-color-scheme: dark) {
-  
+  margin-bottom: 5px;
 }
