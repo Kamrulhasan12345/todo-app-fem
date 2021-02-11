@@ -8,6 +8,14 @@ body.dark {
   --bg-path: url('./images/bg-mobile-dark.jpg');
 }
 
+.mode__switch {
+  --switch-path: url('./images/icon-moon.svg');
+}
+
+.mode__switch.dark {
+  --switch-path: url('./images/icon-moon.svg');
+}
+
 body{
   margin: 0;
   padding: 0;
@@ -25,6 +33,10 @@ body{
 }
 
 .todo__head {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
   font-size: 25px;
   color: #fff;
   letter-spacing: 10px;
@@ -32,10 +44,16 @@ body{
   text-align: left;
 }
 
-.mode__switch.light {
-  display 
+.mode__switch {
+  display: inline-block;
+  position: absolute;
+  border: none;
+  outline: none;
+  padding: 15px 15px;
   background: transparent;
-  background-image: url('./images/icon-moon.svg');
+  background-image: var(--switch-path);
+  background-size: 18px;
+  background-repeat: no-repeat;
 }
 
 @media (prefers-color-scheme: dark) {
