@@ -12,17 +12,38 @@ body.dark {
 
 @media (prefers-color-scheme: dark) {
   body {
-  --bg-col: hsl(0, 0%, 98%);
+  --bg-col: hsl(235, 21%, 11%);
   --bg-path: url('../images/bg-mobile-dark.jpg');
   --switch-path: url('../images/icon-sun.svg');
-}
+  }
 
-body.light {
-  --bg-col: hsl(235, 21%, 11%);
+  body.light {
+  --bg-col: hsl(0, 0%, 98%);
   --bg-path: url('../images/bg-mobile-light.jpg');
   --switch-path: url('../images/icon-moon.svg');
+  }
 }
+
+@media screen and (min-width: 980px) and (prefers-color-scheme:dark)  {
+  body {
+  --bg-path: url('../images/bg-desktop-dark.jpg')!important;
+  }
+
+  body.light {
+  --bg-path: url('../images/bg-desktop-light.jpg')!important;
+  }
 }
+
+@media screen and (min-width: 980px) {
+  body {
+  --bg-path: url('../images/bg-desktop-light.jpg');
+  }
+
+  body.dark {
+  --bg-path: url('../images/bg-desktop-dark.jpg');
+  }
+}
+
 body{
   margin: 0;
   padding: 0;
@@ -67,3 +88,4 @@ body{
   background-repeat: no-repeat;
   margin-bottom: 5px;
 }
+
