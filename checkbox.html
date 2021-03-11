@@ -30,8 +30,8 @@
       flex-direction: column;
     }
     
-    /* Customize the label (the container) */
-    .container {
+    /* Customize the label (the checkit) */
+    .checkit {
       display: block;
       position: relative;
       padding-left: 35px;
@@ -45,7 +45,7 @@
     }
 
     /* Hide the browser's default checkbox */
-    .container input {
+    .checkit input {
       position: absolute;
       opacity: 0;
       cursor: pointer;
@@ -79,13 +79,13 @@
     }
 
     /* On mouse-over, add a grey background color */
-    .container:hover input ~ .checkmark:before {
+    .checkit:hover input ~ .checkmark:before {
       background-image: linear-gradient(to bottom right, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
     }
 
 
     /* When the checkbox is checked, add a blue background */
-    .container input:checked ~ .checkmark {
+    .checkit input:checked ~ .checkmark {
       background-image: linear-gradient(to bottom right, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
     }
 
@@ -97,34 +97,34 @@
     }
 
     /* Show the checkmark when checked */
-    .container input:checked ~ .checkmark:after {
+    .checkit input:checked ~ .checkmark:after {
       display: block;
     }
 
-    .container input:checked ~ .checkmark:before {
+    .checkit input:checked ~ .checkmark:before {
       background-color: none;
       background-image: linear-gradient(to bottom right, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
     }
 
     /* Style the checkmark/indicator */
-    .container .checkmark:after {
+    .checkit .checkmark:after {
       left: 4.8px;
       top: -1.2px;
     }
 
-    .container:hover input ~ .disabled:before {
+    .checkit:hover input ~ .disabled:before {
       background-color: hsl(236, 33%, 92%);
       background-image: none;
     }
   </style>
 </head>
 <body>
-  <label class="container">Enabled
+  <label class="checkit">Enabled
     <input type="checkbox" checked="checked">
     <span class="checkmark"></span>
   </label>
 
-  <label class="container">Disabled
+  <label class="checkit">Disabled
     <input type="checkbox" disabled>
     <span class="checkmark disabled"></span>
   </label>

@@ -24,17 +24,24 @@
   </style>
 </head>
 <body>
+  <div class="main__app">
   <div class="todo__head">
     TODO
     <button class="mode__switch dark" title="Toggle Theme"><div></div></button>
     </div>
     
-    <div class="main__app">
+    <div class="app">
       <div class="create card">
-        
+        <!-- first add disabled label -->
+        <div class="checkit">
+         <input type="checkbox" disabled>
+         <span class="checkmark"></span>
+        </div>
+       <input type="text" class="create__input" placeholder="Create a new todo...">
+        <!-- then add input -->
       </div>
 
-  <!-- Add dynamic number --> items left
+  <!-- Add dynamic number --> <!-- items left
 
   All
   Active 
@@ -42,13 +49,13 @@
 
   Clear Completed
 
-  Drag and drop to reorder list
+  Drag and drop to reorder list-->
   </div>
-
 
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="https://github.com/Kamrulhasan12345">Mohammad Kamrul Hasan</a>.
+  </div>
   </div>
   <script src="./scripts/script.js"></script>
 </body>

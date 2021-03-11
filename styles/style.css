@@ -2,45 +2,51 @@ body {
   --bg-col: hsl(0, 0%, 98%);
   --bg-path: url('../images/bg-mobile-light.jpg');
   --switch-path: url('../images/icon-moon.svg');
+  --card-bg: #fff;
+  --tool-text: hsl(236, 9%, 61%);
 }
 
 body.dark {
   --bg-col: hsl(235, 21%, 11%);
   --bg-path: url('../images/bg-mobile-dark.jpg');
   --switch-path: url('../images/icon-sun.svg');
+  --card-bg: hsl(235, 24%, 19%);
 }
 
 @media (prefers-color-scheme: dark) {
   body {
-  --bg-col: hsl(235, 21%, 11%);
-  --bg-path: url('../images/bg-mobile-dark.jpg');
-  --switch-path: url('../images/icon-sun.svg');
+    --bg-col: hsl(235, 21%, 11%);
+    --bg-path: url('../images/bg-mobile-dark.jpg');
+    --switch-path: url('../images/icon-sun.svg');
+    --card-bg: hsl(235, 24%, 19%);
   }
 
   body.light {
-  --bg-col: hsl(0, 0%, 98%);
-  --bg-path: url('../images/bg-mobile-light.jpg');
-  --switch-path: url('../images/icon-moon.svg');
+    --bg-col: hsl(0, 0%, 98%);
+    --bg-path: url('../images/bg-mobile-light.jpg');
+    --switch-path: url('../images/icon-moon.svg');
+    --card-bg: #fff;
+    --tool-text: hsl(236, 9%, 61%);
   }
 }
 
 @media screen and (min-width: 980px) and (prefers-color-scheme:dark)  {
   body {
-  --bg-path: url('../images/bg-desktop-dark.jpg')!important;
+    --bg-path: url('../images/bg-desktop-dark.jpg')!important;
   }
 
   body.light {
-  --bg-path: url('../images/bg-desktop-light.jpg')!important;
+    --bg-path: url('../images/bg-desktop-light.jpg')!important;
   }
 }
 
 @media screen and (min-width: 980px) {
   body {
-  --bg-path: url('../images/bg-desktop-light.jpg');
+    --bg-path: url('../images/bg-desktop-light.jpg');
   }
 
   body.dark {
-  --bg-path: url('../images/bg-desktop-dark.jpg');
+    --bg-path: url('../images/bg-desktop-dark.jpg');
   }
 }
 
@@ -60,8 +66,17 @@ body{
   background-size: contain;
 }
 
+.main__app {
+  width: 350px;
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+  row-gap: 23px;
+  justify-items: center;
+  align-items: center;
+}
+
 .todo__head {
-  width: 85%;
+  width: 305px;
   display: flex;
   justify-content: space-between;
   flex-direction: row;
@@ -89,3 +104,64 @@ body{
   margin-bottom: 5px;
 }
 
+.app {
+  width: 305px;
+  display: grid;
+  grid-template-rows: auto auto;
+  row-gap: 10px;
+  justify-items: center;
+  font-size: 11px;
+}
+
+.card {
+  width: 250px;
+  height: 30px;
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(3, auto);
+  background-color: var(--card-bg);
+  /*border-radius: 5px;*/
+  color: var(--text);
+}
+
+.create.card {
+  color: var(--tool-text);
+}
+
+.create__input {
+  background: transparent;
+  border: none;
+  color: var(--tool-text);
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 12px;
+}
+
+.create__input:focus {
+  outline: none;
+}
+
+.create__input::placeholder {
+  color: var(--tool-text);
+  opacity: 1;
+}
+
+.checkit {
+  display: block;
+  position: relative;
+}
+
+.checkit input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  border: 0.5px solid var(--tool-text);
+}
