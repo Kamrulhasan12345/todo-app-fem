@@ -4,6 +4,7 @@ body {
   --switch-path: url('../images/icon-moon.svg');
   --card-bg: #fff;
   --tool-text: hsl(236, 9%, 61%);
+  --checkbox-col: hsl(236, 33%, 92%);
 }
 
 body.dark {
@@ -11,6 +12,8 @@ body.dark {
   --bg-path: url('../images/bg-mobile-dark.jpg');
   --switch-path: url('../images/icon-sun.svg');
   --card-bg: hsl(235, 24%, 19%);
+  --tool-text: hsl(234, 11%, 52%);
+  --checkbox-col: hsl(233, 14%, 35%);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -19,6 +22,8 @@ body.dark {
     --bg-path: url('../images/bg-mobile-dark.jpg');
     --switch-path: url('../images/icon-sun.svg');
     --card-bg: hsl(235, 24%, 19%);
+    --tool-text: hsl(234, 11%, 52%);
+    --checkbox-col: hsl(233, 14%, 35%);
   }
 
   body.light {
@@ -27,10 +32,11 @@ body.dark {
     --switch-path: url('../images/icon-moon.svg');
     --card-bg: #fff;
     --tool-text: hsl(236, 9%, 61%);
+    --checkbox-col: hsl(236, 33%, 92%);
   }
 }
 
-@media screen and (min-width: 980px) and (prefers-color-scheme:dark)  {
+@media screen and (min-width: 870px) and (prefers-color-scheme:dark)  {
   body {
     --bg-path: url('../images/bg-desktop-dark.jpg')!important;
   }
@@ -40,7 +46,7 @@ body.dark {
   }
 }
 
-@media screen and (min-width: 980px) {
+@media screen and (min-width: 870px) {
   body {
     --bg-path: url('../images/bg-desktop-light.jpg');
   }
@@ -70,7 +76,7 @@ body{
   width: 350px;
   display: grid;
   grid-template-rows: repeat(3, auto);
-  row-gap: 23px;
+  row-gap: 30px;
   justify-items: center;
   align-items: center;
 }
@@ -114,13 +120,14 @@ body{
 }
 
 .card {
-  width: 250px;
-  height: 30px;
+  width: 260px;
+  height: 22px;
   display: grid;
   align-items: center;
   grid-template-columns: repeat(3, auto);
   background-color: var(--card-bg);
-  /*border-radius: 5px;*/
+  border-radius: 5px;
+  padding: 12px 17px;
   color: var(--text);
 }
 
@@ -131,9 +138,12 @@ body{
 .create__input {
   background: transparent;
   border: none;
+  width: 225px;
   color: var(--tool-text);
   font-family: 'Josefin Sans', sans-serif;
   font-size: 12px;
+  margin: auto;
+  margin-left: 30px;
 }
 
 .create__input:focus {
@@ -147,7 +157,8 @@ body{
 
 .checkit {
   display: block;
-  position: relative;
+  position: absolute;
+  margin-top: 5.5px;
 }
 
 .checkit input {
@@ -159,9 +170,11 @@ body{
 }
 
 .checkmark {
-  position: absolute;
+  position: relative;
   width: 20px;
   height: 20px;
+  padding: 4.5px 10.3px;
   border-radius: 20px;
-  border: 0.5px solid var(--tool-text);
+  border: 0.5px solid var(--checkbox-col);
+  margin-right: 5px;
 }
