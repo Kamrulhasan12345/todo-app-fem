@@ -1,70 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  
-  <!-- <meta charset="UTF-8"> -->
-  <meta http-equiv="Content-Type" content="text/html">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Todo app</title>
-  
-  <!-- Stylesheet -->
-  <link rel="stylesheet" href="./styles/style.css">
-  <link rel="manifest" href="manifest.json">
-  
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-  <div class="main__app">
-  <div class="todo__head">
-    TODO
-    <button class="mode__switch dark" title="Toggle Theme"><div></div></button>
+  <head>
+    <!-- <meta charset="UTF-8"> -->
+    <meta http-equiv="Content-Type" content="text/html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <title>Frontend Mentor | Todo app</title>
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="manifest" href="manifest.json">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution { font-size: 11px; text-align: center; }
+      .attribution a { color: hsl(228, 45%, 44%); }
+    </style>
+  </head>
+  <body>
+    <div class="main__app">
+      <div class="todo__head">
+        TODO
+        <button class="mode__switch dark" title="Toggle Theme">
+          <div></div>
+        </button>
+      </div>
+      <div class="app">
+        <div class="create card">
+          <!-- first add disabled label -->
+          <div class="checkit">
+            <input type="checkbox" disabled>
+            <span class="checkmark"></span>
+          </div>
+          <input type="text" class="create__input" placeholder="Create a new todo...">
+          <!-- then add input -->
+        </div>
+        <div class="card__list">
+          <div class="list"></div>
+          <div class="infos">
+            <!-- Add dynamic number --> <!-- items left-->
+          </div>
+        </div>
+        <div class="panel card">
+          <!--
+            All
+            Active 
+            Completed
+            
+            Clear Completed
+            
+            Drag and drop to reorder list-->
+        </div>
+      </div>
+      <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+        Coded by <a href="https://github.com/Kamrulhasan12345">Mohammad Kamrul Hasan</a>.
+      </div>
     </div>
-    
-    <div class="app">
-      <div class="create card">
-        <!-- first add disabled label -->
-        <div class="checkit">
-         <input type="checkbox" disabled>
-         <span class="checkmark"></span>
-        </div>
-       <input type="text" class="create__input" placeholder="Create a new todo...">
-        <!-- then add input -->
-      </div>
-      <div class="card__list">
-        <div class="list"></div>
-        <div class="infos">
-  <!-- Add dynamic number --> <!-- items left-->
-        </div>
-      </div>
-      <div class="panel card">
-  <!--
-
-  All
-  Active 
-  Completed
-
-  Clear Completed
-
-  Drag and drop to reorder list-->
-  </div>
-  </div>
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="https://github.com/Kamrulhasan12345">Mohammad Kamrul Hasan</a>.
-  </div>
-  </div>
-  <script src="./scripts/script.js"></script>
-</body>
+    <script src="./scripts/script.js"></script>
+  </body>
 </html>
