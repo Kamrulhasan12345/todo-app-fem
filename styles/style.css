@@ -3,6 +3,7 @@ body {
   --bg-path: url('../images/bg-mobile-light.jpg');
   --switch-path: url('../images/icon-moon.svg');
   --card-bg: #fff;
+  --input-col: #000;
   --tool-text: hsl(236, 9%, 61%);
   --checkbox-col: hsl(236, 33%, 92%);
 }
@@ -12,6 +13,7 @@ body.dark {
   --bg-path: url('../images/bg-mobile-dark.jpg');
   --switch-path: url('../images/icon-sun.svg');
   --card-bg: hsl(235, 24%, 19%);
+  --input-col: #fff;
   --tool-text: hsl(234, 11%, 52%);
   --checkbox-col: hsl(233, 14%, 35%);
 }
@@ -140,7 +142,7 @@ body{
   background: transparent;
   border: none;
   width: 225px;
-  color: var(--tool-text);
+  color: var(--input-col);
   font-family: 'Josefin Sans', sans-serif;
   font-size: 12px;
   margin: auto;
