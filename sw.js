@@ -3,6 +3,7 @@ const resourcesToPrecache = [
   '/',
   'index.html',
   'styles/style.css',
+  'styles/fonts.css',
   'scripts/script.js',
   'images/bg-desktop-dark.jpg',
   'images/bg-desktop-light.jpg',
@@ -12,7 +13,17 @@ const resourcesToPrecache = [
   'images/icon-check.svg',
   'images/icon-cross.svg',
   'images/icon-moon.svg',
-  'images/icon-sun.svg'
+  'images/icon-sun.svg',
+  'fonts/josefin-sans-v17-latin-700.eot',
+  'fonts/josefin-sans-v17-latin-700.svg',
+  'fonts/josefin-sans-v17-latin-700.ttf',
+  'fonts/josefin-sans-v17-latin-700.woff',
+  'fonts/josefin-sans-v17-latin-700.woff2',
+  'fonts/josefin-sans-v17-latin-regular.eot',
+  'fonts/josefin-sans-v17-latin-regular.svg',
+  'fonts/josefin-sans-v17-latin-regular.ttf',
+  'fonts/josefin-sans-v17-latin-regular.woff',
+  'fonts/josefin-sans-v17-latin-regular.woff2'
 ];
 
 self.addEventListener('install', event => {
