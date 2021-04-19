@@ -45,7 +45,7 @@ body.dark {
   }
 }
 
-@media screen and (min-width: 870px) and (prefers-color-scheme:dark)  {
+@media screen and (min-width: 640px) and (prefers-color-scheme:dark)  {
   body {
     --bg-path: url('../images/bg-desktop-dark.jpg')!important;
   }
@@ -55,7 +55,7 @@ body.dark {
   }
 }
 
-@media screen and (min-width: 870px) {
+@media screen and (min-width: 640px) {
   body {
     --bg-path: url('../images/bg-desktop-light.jpg');
   }
@@ -196,20 +196,27 @@ body{
   color: var(--tool-text);
 }
 
-.app a {
+.app button {
   text-decoration: none;
   color: var(--tool-text);
+  background-color: transparent;
   font-size: 14px;
   font-weight: 700;
   margin-top: 2px;
+  border: none;
+  font-family: 'Josefin Sans', sans-serif;
   transition: all 0.4s ease;
 }
 
-.app a:hover {
+.app button:hover {
   outline: none;
   color: var(--anchor-hover);
 }
 
-.app a:active {
+.app button:active {
   color: var(--anchor-active);
+}
+
+.app button:focus {
+  outline: none;
 }
